@@ -6,7 +6,7 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 09:50:02 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 11:05:42 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 
-#include "libft.h"
+#include "../libft/libft.h"
 
 typedef struct 	s_unit_test
 {
