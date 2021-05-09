@@ -6,11 +6,11 @@
 #    By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 08:25:10 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/09 10:04:58 by mhorie           ###   ########.fr        #
+#    Updated: 2021/05/09 10:31:50 by mhorie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	tests
+NAME		=	tests.out
 
 SRCS		=	main.c $(wildcard */*.c)
 
