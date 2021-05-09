@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libunit.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/08 19:01:30 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 09:50:02 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #include <sys/wait.h>
 #include <signal.h>
 
+#include "libft.h"
+
 typedef struct 	s_unit_test
 {
 	char					*test_name;
@@ -27,7 +29,13 @@ typedef struct 	s_unit_test
 }				t_unit_test;
 
 int		list_size(t_unit_test *testlist);
-int		load_test(t_unit_test **testlist, char *test_name, void *(f));
+int		load_test(t_unit_test **testlist, char *test_name, int (*f)(void));
 int		launch_tests(t_unit_test **testlist);
+
+void	print_header(void);
+void	print_title(char *title);
+void	print_name(char *test_name);
+void	print_result(int result);
+void	print_launch_result(int list_size, int ok_cnt);
 
 #endif
