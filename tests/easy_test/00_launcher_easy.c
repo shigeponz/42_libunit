@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher_easy.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/08 18:06:36 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 10:07:05 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include "easy_test.h"
-#include "../../framework/libunit.h"
+#include "libunit.h"
+#include "libft.h"
 
 int		easy_launcher(void)
 {
 	t_unit_test		*testlist;
 
-	puts("EASY:");
+	testlist = NULL;
+	print_title("EASY");
 	load_test(&testlist, "Ok test", &ok_test);
 	load_test(&testlist, "Ng test", &ng_test);
 	load_test(&testlist, "SegV test", &segv_test);

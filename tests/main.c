@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:19:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/08 16:55:14 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 09:45:10 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "launch.h"
+#include "libunit.h"
 
 int		main(void)
 {
-	
+	print_header();
+	easy_launcher();
+
+	return (0);
 }
