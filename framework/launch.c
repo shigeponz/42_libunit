@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 14:42:18 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 14:53:54 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static int	get_status(t_unit_test *testlist, int size)
 
 int	load_test(t_unit_test **testlist, char *test_name, int (*f)(void))
 {
-	t_unit_test	*new;
-	t_unit_test *tmp;
+	t_unit_test		*new;
+	t_unit_test		*tmp;
 
 	if (!testlist)
 		return (-1);
@@ -69,7 +69,7 @@ int	load_test(t_unit_test **testlist, char *test_name, int (*f)(void))
 	return (0);
 }
 
-int		launch_tests(t_unit_test **testlist)
+int	launch_tests(t_unit_test **testlist)
 {
 	int				i;
 	int				size;

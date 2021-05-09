@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/09 14:23:41 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 14:53:13 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	print_result(int result)
 	else if (result == 256)
 		write(1, "[NG]\n", 5);
 	else if (result == 11)
-		write(1, "[SEGV]\n",7);
+		write(1, "[SEGV]\n", 7);
 	else if (result == 10)
-		write(1, "[BUSE]\n",7);
+		write(1, "[BUSE]\n", 7);
 }
 
 void	print_launch_result(int list_size, int ok_cnt)

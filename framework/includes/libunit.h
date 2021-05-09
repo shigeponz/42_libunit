@@ -6,24 +6,24 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 13:51:53 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 14:54:56 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBUNIT_H
-#define LIBUNIT_H
+# define LIBUNIT_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/wait.h>
-#include <signal.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <sys/wait.h>
+# include <signal.h>
 
-typedef struct 	s_unit_test
+typedef struct s_unit_test
 {
 	char					*test_name;
 	int						(*f)();
-	struct	s_unit_test		*next;
+	struct s_unit_test		*next;
 }				t_unit_test;
 
 size_t	ft_strlen(const char *s);
