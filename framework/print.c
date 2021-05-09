@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/09 11:34:06 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 14:23:41 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "./includes/libunit.h"
 
 void	print_header(void)
 {
@@ -36,8 +36,12 @@ void	print_result(int result)
 {
 	if (result == 0)
 		write(1, "[OK]\n", 5);
-	else
+	else if (result == 256)
 		write(1, "[NG]\n", 5);
+	else if (result == 11)
+		write(1, "[SEGV]\n",7);
+	else if (result == 10)
+		write(1, "[BUSE]\n",7);
 }
 
 void	print_launch_result(int list_size, int ok_cnt)

@@ -3,21 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   launch.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 10:07:44 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 14:42:18 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include "./includes/libunit.h"
 
 static int	run_test(t_unit_test *testlist)
 {
-	print_name(testlist->test_name);
-	print_result(0);
-	free(testlist);
-	return (0);
+	int		ret;
+
+	ret = testlist->f();
+	if (ret)
+		exit(0);
+	else
+		exit(1);
+}
+
+static int	get_status(t_unit_test *testlist, int size)
+{
+	int		i;
+	int		ok_cnt;
+	int		status;
+
+	i = 0;
+	ok_cnt = 0;
+	while (i < size)
+	{
+		wait(&status);
+		print_name(testlist->test_name);
+		testlist = testlist->next;
+		if (status == 0)
+			ok_cnt++;
+		print_result(status);
+		i++;
+	}
+	return (ok_cnt);
 }
 
 int	load_test(t_unit_test **testlist, char *test_name, int (*f)(void))
@@ -47,24 +71,28 @@ int	load_test(t_unit_test **testlist, char *test_name, int (*f)(void))
 
 int		launch_tests(t_unit_test **testlist)
 {
-	int		size;
-	int		i;
-	int		result;
-	int		ok_cnt;
+	int				i;
+	int				size;
+	t_unit_test		*tmp;
+	pid_t			*pid;
 
 	i = 0;
-	ok_cnt = 0;
 	if (testlist == NULL)
 		return (-1);
 	size = list_size(*testlist);
+	pid = malloc(sizeof(pid_t) * size);
+	tmp = *testlist;
+	if (pid == NULL)
+		return (-1);
 	while (i < size)
 	{
-		result = run_test(*testlist);
-		if (result == 0)
-			ok_cnt++;
+		pid[i] = fork();
+		if (pid[i] == 0)
+			run_test(*testlist);
 		*testlist = (*testlist)->next;
 		i++;
 	}
-	print_launch_result(size, ok_cnt);
+	i = 0;
+	print_launch_result(size, get_status(tmp, size));
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libunit.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 11:35:10 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 13:51:53 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 typedef struct 	s_unit_test
 {
 	char					*test_name;
-	void					*f;
+	int						(*f)();
 	struct	s_unit_test		*next;
 }				t_unit_test;
 
