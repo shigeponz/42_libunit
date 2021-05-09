@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 14:54:56 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/09 18:01:03 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ typedef struct s_unit_test
 	int						(*f)();
 	struct s_unit_test		*next;
 }				t_unit_test;
+
+typedef struct s_id_status
+{
+	int		id;
+	int		status;
+}	t_id_status;
+
 
 size_t	ft_strlen(const char *s);
 void	ft_putnbr(int n);
