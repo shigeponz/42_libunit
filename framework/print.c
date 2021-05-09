@@ -6,7 +6,7 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/09 10:07:18 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 11:34:06 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,36 @@
 
 void	print_header(void)
 {
-	ft_putendl_fd("*********************************", 1);
-	ft_putendl_fd("** 42 - Unit Tests ****", 1);
-	ft_putendl_fd("*********************************", 1);
+	write(1, "*********************************\n", 34);
+	write(1, "** 42 - Unit Tests ****\n", 24);
+	write(1, "*********************************\n", 34);
 }
 
 void	print_title(char *title)
 {
-	ft_putstr_fd(title, 1);
-	ft_putendl_fd(":", 1);
+	write(1, title, ft_strlen(title));
+	write(1, ":\n", 2);
 }
 
 void	print_name(char *test_name)
 {
-	ft_putstr_fd("    > ", 1);
-	ft_putstr_fd(test_name, 1);
-	ft_putstr_fd(" : ", 1);
+	write(1, "    > ", 6);
+	write(1, test_name, ft_strlen(test_name));
+	write(1, " : ", 3);
 }
 
 void	print_result(int result)
 {
 	if (result == 0)
-		ft_putendl_fd("[OK]", 1);
+		write(1, "[OK]\n", 5);
 	else
-		ft_putendl_fd("[NG]", 1);
+		write(1, "[NG]\n", 5);
 }
 
 void	print_launch_result(int list_size, int ok_cnt)
 {
-	ft_putnbr_fd(ok_cnt, 1);
-	ft_putstr_fd("/", 1);
-	ft_putnbr_fd(list_size, 1);
-	ft_putstr_fd(" tests checked\n", 1);
+	ft_putnbr(ok_cnt);
+	write(1, "/", 1);
+	ft_putnbr(list_size);
+	write(1, " tests checked\n", 15);
 }

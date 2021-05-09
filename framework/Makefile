@@ -6,7 +6,7 @@
 #    By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 07:19:53 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/09 09:40:32 by mhorie           ###   ########.fr        #
+#    Updated: 2021/05/09 11:35:02 by mhorie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -f
 
-INCLUDE		=	-I ./includes -I ./libft
+INCLUDE		=	-I ./includes
 
 .c.o:
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
@@ -30,16 +30,12 @@ INCLUDE		=	-I ./includes -I ./libft
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) bonus -C ./libft
-	cp libft/libft.a $(NAME)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	$(MAKE) clean -C ./libft
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(MAKE) fclean -C ./libft
 	$(RM) $(NAME)
 
 re: fclean all

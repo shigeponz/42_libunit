@@ -6,14 +6,12 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 10:07:05 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/09 11:16:54 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "easy_test.h"
 #include "libunit.h"
-#include "libft.h"
 
 int		easy_launcher(void)
 {
