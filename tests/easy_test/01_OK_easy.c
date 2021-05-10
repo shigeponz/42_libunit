@@ -6,12 +6,15 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:59:04 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/08 17:01:52 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 19:36:14 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ok_test(void)
 {
+	sleep(2);
 	if (1)
 		return (0);
 	else

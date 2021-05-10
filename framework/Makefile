@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+         #
+#    By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 07:19:53 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/09 11:35:02 by mhorie           ###   ########.fr        #
+#    Updated: 2021/05/10 19:46:31 by hshigemu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libunit.a
 
-SRCS		=	launch.c utils.c print.c
+SRCS		=	launch.c utils.c print.c load_run.c
 
 OBJS		=	$(SRCS:.c=.o)
 
