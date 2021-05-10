@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 23:03:00 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:06:54 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int	launch_tests(t_unit_test **testlist)
 	if (process == NULL)
 		return (free_testlist(testlist));
 	t = get_status(tmp, size);
-	print_all(process, t, size, tmp);
+	ok_cnt = print_all(process, t, size, tmp);
 	free(t);
 	free(process);
 	free_testlist(testlist);
