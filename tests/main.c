@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:19:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:09:13 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 22:16:32 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ int		main(void)
 	ret = easy_launcher();
 	if (ret == -1)
 		puts("Test Error!");
-	system("leaks tests.out");
 	return (0);
 }
