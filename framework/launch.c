@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 23:06:54 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 00:06:28 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,5 @@ int	launch_tests(t_unit_test **testlist)
 	if (ok_cnt == size)
 		return (0);
 	else
-		return(-1);
+		return (-1);
 }
