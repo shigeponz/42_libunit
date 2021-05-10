@@ -6,14 +6,14 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:11:32 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:46:46 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easy_test.h"
 #include "libunit.h"
 
-int		easy_launcher(void)
+int	easy_launcher(void)
 {
 	int				ret;
 	t_unit_test		*testlist;
