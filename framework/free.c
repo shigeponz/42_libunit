@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 16:19:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:09:13 by hshigemu         ###   ########.fr       */
+/*   Created: 2021/05/10 21:56:36 by hshigemu          #+#    #+#             */
+/*   Updated: 2021/05/10 22:05:30 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "launch.h"
-#include "libunit.h"
+#include "./includes/libunit.h"
 
-int		main(void)
+int	free_testlist(t_unit_test **testlist)
 {
-	int		ret;
-	
-	print_header();
-	ret = easy_launcher();
-	if (ret == -1)
-		puts("Test Error!");
-	system("leaks tests.out");
-	return (0);
+	t_unit_test		*tmp;
+
+	while (*testlist != NULL)
+	{
+		tmp = (*testlist)->next;
+		free(*testlist);
+		*testlist = tmp;
+	}
+	return (-1);
 }

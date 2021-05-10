@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 19:46:02 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 22:05:43 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ void	print_title(char *title);
 void	print_name(char *test_name);
 void	print_result(int result);
 void	print_launch_result(int list_size, int ok_cnt);
+
+int		free_testlist(t_unit_test **testlist);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 19:46:13 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 22:09:58 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,11 @@ int	launch_tests(t_unit_test **testlist)
 	tmp = *testlist;
 	process = fork_process(size, *testlist);
 	if (process == NULL)
-		return (-1);
+		return (free_testlist(testlist));
 	t = get_status(tmp, size);
 	print_all(process, t, size, tmp);
+	free(t);
+	free(process);
+	free_testlist(testlist);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   00_launcher_easy.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 11:16:54 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/10 22:11:32 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 
 int		easy_launcher(void)
 {
+	int				ret;
 	t_unit_test		*testlist;
 
+	ret = 0;
 	testlist = NULL;
 	print_title("EASY");
-	load_test(&testlist, "Ok test", &ok_test);
-	load_test(&testlist, "Ng test", &ng_test);
-	load_test(&testlist, "SegV test", &segv_test);
-	load_test(&testlist, "Bus test", &bus_test);
+	ret += load_test(&testlist, "Ok test", &ok_test);
+	ret += load_test(&testlist, "Ng test", &ng_test);
+	ret += load_test(&testlist, "SegV test", &segv_test);
+	ret += load_test(&testlist, "Bus test", &bus_test);
+	if (ret < 0)
+		return (free_testlist(&testlist));
 	return (launch_tests(&testlist));
 }

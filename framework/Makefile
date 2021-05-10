@@ -6,13 +6,13 @@
 #    By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 07:19:53 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/10 19:46:31 by hshigemu         ###   ########.fr        #
+#    Updated: 2021/05/10 22:06:59 by hshigemu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libunit.a
 
-SRCS		=	launch.c utils.c print.c load_run.c
+SRCS		=	launch.c utils.c print.c load_run.c free.c
 
 OBJS		=	$(SRCS:.c=.o)
 
