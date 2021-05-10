@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+         #
+#    By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 08:25:10 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/09 11:35:30 by mhorie           ###   ########.fr        #
+#    Updated: 2021/05/10 22:43:38 by hshigemu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(MAKE) -C ../framework
 	$(CC) $(CFLAGS) $(INCLUDE) -L ../framework -lunit -o $(NAME) $(OBJS)
+
+test:	$(NAME)
+	./$(NAME)
 
 clean:
 	$(MAKE) clean -C ../framework
