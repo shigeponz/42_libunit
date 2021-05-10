@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 18:43:17 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:09:58 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 22:14:00 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	find_child(int key, t_id_status *t, int size)
 {
 	int		i;
 	int		ret;
-	
+
 	i = 0;
 	ret = 0;
 	while (i < size)
@@ -44,7 +44,7 @@ int	find_child(int key, t_id_status *t, int size)
 			return (t[i].status);
 		i++;
 	}
-	return (-1); 
+	return (-1);
 }
 
 int	print_all(int *process, t_id_status *t, int size, t_unit_test *testlist)
