@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 21:56:36 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:05:30 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/10 23:03:10 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	free_testlist(t_unit_test **testlist)
 		free(*testlist);
 		*testlist = tmp;
 	}
-	return (-1);
+	return (-2);
 }
