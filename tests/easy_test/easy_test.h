@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easy_test.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:12:45 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/09 09:14:20 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 21:27:11 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@ int		ok_test(void);
 int		ng_test(void);
 int		segv_test(void);
 int		bus_test(void);
+int		abort_test(void);
+int		timeout_test(void);
 
 #endif

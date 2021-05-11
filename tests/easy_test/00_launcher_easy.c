@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 23:46:46 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 23:33:08 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	easy_launcher(void)
 	ret += load_test(&testlist, "Ng test", &ng_test);
 	ret += load_test(&testlist, "SegV test", &segv_test);
 	ret += load_test(&testlist, "Bus test", &bus_test);
+	ret += load_test(&testlist, "Abort test", &abort_test);
+	ret += load_test(&testlist, "Timeout test", &timeout_test);
 	if (ret < 0)
 		return (free_testlist(&testlist));
 	return (launch_tests(&testlist));
