@@ -6,12 +6,11 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:54:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 18:51:19 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 21:33:01 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_atoi.h"
-#include "libunit.h"
 
 int	atoi_launcher(void)
 {

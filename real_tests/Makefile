@@ -6,7 +6,7 @@
 #    By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/09 08:25:10 by mhorie            #+#    #+#              #
-#    Updated: 2021/05/11 18:23:30 by mhorie           ###   ########.fr        #
+#    Updated: 2021/05/11 23:19:24 by mhorie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(MAKE) -C ../framework
-	$(CC) $(CFLAGS) $(INCLUDE) -L ../framework -lunit -o $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDE) -L ../framework -o $(NAME) $(OBJS) -lunit
 
 test:	$(NAME)
 	./$(NAME)

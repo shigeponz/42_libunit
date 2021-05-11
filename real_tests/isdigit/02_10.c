@@ -6,7 +6,7 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:59:04 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 19:52:01 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 22:23:34 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	test_isdigit_10(void)
 	int	n;
 
 	n = 10;
-	if (ft_isdigit(n) == isdigit(n))
+	if (!!ft_isdigit(n) == !!isdigit(n))
 		return (0);
 	else
 		return (-1);

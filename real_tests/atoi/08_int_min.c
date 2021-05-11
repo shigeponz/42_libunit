@@ -6,12 +6,12 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:59:04 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 18:37:35 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 21:21:07 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
-#include <libc.h>
+#include <stdlib.h>
 
 int	test_atoi_int_min(void)
 {

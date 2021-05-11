@@ -6,7 +6,7 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 16:19:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 19:31:26 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 22:27:44 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,23 @@ static	int	(*g_launchesr[])(void) = {
 int	main(void)
 {
 	int	i;
-	int	ret;
+	int	result;
+	int	result_all;
 
 	print_header();
 	i = 0;
+	result_all = 0;
 	while (i < g_launcher_cnt)
 	{
-		ret = g_launchesr[i]();
-		if (ret == -2)
+		result = g_launchesr[i]();
+		if (result == -2)
 		{
 			puts("Test Error!");
 			exit(1);
 		}
+		if (result != 0)
+			result_all = result;
 		i++;
 	}
-	return (0);
+	return (result_all);
 }

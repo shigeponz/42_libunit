@@ -6,12 +6,14 @@
 /*   By: mhorie <mhorie@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:12:45 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 18:48:49 by mhorie           ###   ########.fr       */
+/*   Updated: 2021/05/11 21:32:54 by mhorie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TEST_ATOI_H
 # define TEST_ATOI_H
+
+# include "../../framework/includes/libunit.h"
 
 int	test_atoi_null(void);
 int	test_atoi_empty_string(void);
