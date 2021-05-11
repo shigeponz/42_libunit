@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easy_test.h                                        :+:      :+:    :+:   */
+/*   05_abort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 17:12:45 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 21:19:27 by hshigemu         ###   ########.fr       */
+/*   Created: 2021/05/11 21:18:08 by hshigemu          #+#    #+#             */
+/*   Updated: 2021/05/11 21:18:50 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASY_TEST_H
-# define EASY_TEST_H
-
-int		ok_test(void);
-int		ng_test(void);
-int		segv_test(void);
-int		bus_test(void);
-int		abort_test(void);
-
-#endif
+#include "libunit.h"
+#include <stdlib.h>
+	
+int	abort_test(void)
+{
+	abort();
+}

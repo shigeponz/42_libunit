@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/11 21:10:40 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 21:20:57 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	print_result(int result)
 			write(1, "[SEGV]\n", 7);
 		else if (result == 10)
 			write(1, "[BUSE]\n", 7);
+		else if (result == 6)
+			write(1, "[ABORT]\n", 8);
 	}
 	write(1, T_RESET, T_SIZE);
 }
