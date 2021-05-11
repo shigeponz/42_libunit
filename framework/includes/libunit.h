@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 23:36:18 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/12 00:04:43 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # define T_GREEN	"\x1b[32m"
 # define T_RED		"\x1b[31m"
 # define T_RESET	"\x1b[39m"
-# define T_SIZE		sizeof(T_GREEN)
 # define T_TIMER	5
 
 typedef struct s_unit_test

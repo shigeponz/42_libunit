@@ -6,13 +6,13 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 21:18:08 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 21:18:50 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/12 00:03:37 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include <stdlib.h>
-	
+
 int	abort_test(void)
 {
 	abort();

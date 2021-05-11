@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/11 23:42:27 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/12 00:06:42 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ void	print_result(int result)
 {
 	if (result == 0)
 	{
-		write(1, T_GREEN, T_SIZE);
+		write(1, T_GREEN, sizeof(T_GREEN));
 		write(1, "[OK]\n", 5);
 	}
 	else
 	{
-		write(1, T_RED, T_SIZE);
+		write(1, T_RED, sizeof(T_RED));
 		if (result == 256)
 			write(1, "[NG]\n", 5);
 		else if (result == 11)
@@ -55,7 +55,7 @@ void	print_result(int result)
 		else
 			write(1, "[OTHER SIG]\n", 12);
 	}
-	write(1, T_RESET, T_SIZE);
+	write(1, T_RESET, sizeof(T_RESET));
 }
 
 void	print_launch_result(int list_size, int ok_cnt)
