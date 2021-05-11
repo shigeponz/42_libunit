@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:50:01 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 22:13:52 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 21:07:32 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <unistd.h>
 # include <sys/wait.h>
 # include <signal.h>
+
+# define T_GREEN	"\x1b[32m"
+# define T_RED		"\x1b[31m"
+# define T_RESET	"\x1b[39m"
+# define T_SIZE		sizeof(T_GREEN)
 
 typedef struct s_unit_test
 {
