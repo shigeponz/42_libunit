@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   06_timeout.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/08 16:19:05 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 21:52:10 by hshigemu         ###   ########.fr       */
+/*   Created: 2021/05/11 21:25:37 by hshigemu          #+#    #+#             */
+/*   Updated: 2021/05/11 21:28:40 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "launch.h"
 #include "libunit.h"
 
-int		main(void)
+int	timeout_test(void)
 {
-	int		ret;
-	
-	print_header();
-	ret = easy_launcher();
-	if (ret == -2)
-	{
-		puts("Test Error!");
-		exit(1);
-	}
+	sleep(100);
 	return (0);
 }

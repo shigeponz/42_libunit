@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 17:12:45 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 21:19:27 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 21:27:11 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int		ng_test(void);
 int		segv_test(void);
 int		bus_test(void);
 int		abort_test(void);
+int		timeout_test(void);
 
 #endif
