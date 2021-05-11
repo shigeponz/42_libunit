@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 08:02:55 by mhorie            #+#    #+#             */
-/*   Updated: 2021/05/11 21:20:57 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 23:42:27 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ void	print_result(int result)
 			write(1, "[BUSE]\n", 7);
 		else if (result == 6)
 			write(1, "[ABORT]\n", 8);
+		else if (result == 14)
+			write(1, "[TLE]\n", 6);
+		else
+			write(1, "[OTHER SIG]\n", 12);
 	}
 	write(1, T_RESET, T_SIZE);
 }

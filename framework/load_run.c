@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 19:44:21 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/10 19:45:50 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 23:40:55 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	run_test(t_unit_test *testlist)
 {
 	int		ret;
 
+	alarm(T_TIMER);
 	ret = testlist->f();
 	if (ret == 0)
 		exit(0);

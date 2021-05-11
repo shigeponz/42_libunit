@@ -6,7 +6,7 @@
 /*   By: hshigemu <hshigemu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 21:25:37 by hshigemu          #+#    #+#             */
-/*   Updated: 2021/05/11 21:28:40 by hshigemu         ###   ########.fr       */
+/*   Updated: 2021/05/11 23:35:36 by hshigemu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int	timeout_test(void)
 {
-	sleep(100);
+	while (1)
+	{
+		;
+	}
 	return (0);
 }
