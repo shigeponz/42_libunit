@@ -17,3 +17,4 @@ jobs:
       run: make -C real_tests re
     - name: Test
       run: make -C real_tests test
+
